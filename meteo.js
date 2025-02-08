@@ -4,7 +4,7 @@ fetch('data.json')
     .then(config => {
         const city = config.city;
         getWeather(city);
-        // Met à jour les données météo toutes les heures (3600000 ms = 1 heure)
+        // Met à jour les données météo toutes les heures (3.600.000 ms = 1 heure)
         setInterval(() => getWeather(city), 3600000);
     })
     .catch(error => console.error('Erreur lors du chargement de la configuration:', error));
